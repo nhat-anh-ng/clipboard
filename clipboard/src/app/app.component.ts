@@ -108,15 +108,15 @@ export class AppComponent {
   iconList = [
     {
       img: "assets/images/icon-facebook.svg",
-      alt: ""
+      alt: "facebook"
     },
     {
       img: "assets/images/icon-twitter.svg",
-      alt: ""
+      alt: "twitter"
     },
     {
       img: "assets/images/icon-instagram.svg",
-      alt: ""
+      alt: "instagram"
     }
   ]
 
