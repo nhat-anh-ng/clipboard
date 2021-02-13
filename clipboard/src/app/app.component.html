@@ -1,24 +1,33 @@
-<body align="center">
+<section class="font" align="center">
   
-<section fxLayout="column">
-  <img src="assets/images/logo.svg" alt="logo">
+<section fxLayout="column" >
+  <div class="imgBg">
+  <img src="assets/images/logo.svg" alt="logo" >
+  </div>
   <h1> {{ section1.title }}</h1>
   <p> {{ section1.subtitle}}</p>
   <div fxLayout="column">
     <div>
-    <button>{{ btn.textA }}</button>
+    <button class="btnA">{{ btn.textA }}</button>
     </div>
     <div>
-    <button> {{ btn.textB }}</button>
+    <button class="btnB"> {{ btn.textB }}</button>
     </div>
     
   </div>
 </section>
 
 <section fxLayout="column">
+  <div>
   <h1>{{ section2.title }}</h1>
   <p> {{ section2.subtitle }} </p>
-  <img [src]=[section2.img] [alt]=[section2.alt]>
+  <mat-card class="mat-elevation-z0">
+  <img mat-card-image [src]=[section2.img] [alt]=[section2.alt]>
+    </mat-card>
+  
+  
+  </div>
+ 
 
   <div *ngFor= "let column of columnList">
     <h2> {{ column.title }}</h2>
@@ -29,7 +38,9 @@
 <section fxLayout="column">
   <h1> {{ section3.title }}</h1>
   <p> {{ section3.subtitle }}</p>
-  <img [src]=[section3.img] [alt]=[section3.alt] >
+  <mat-card class="mat-elevation-z0">
+  <img mat-card-image [src]=[section3.img] [alt]=[section3.alt]>
+  </mat-card>
 </section>
 
 <section fxLayout="column">
@@ -39,13 +50,13 @@
   <div *ngFor = "let row of rowList">
     <img [src]=[row.img] [alt]=[row.alt] >
     <h2> {{row.title}} </h2>
-    <p> {{row.subtite}} </p>
+    <p> {{row.subtitle}} </p>
   </div>
 
 </section>
 
 <section fxLayout="column">
-  <div *ngFor="let image of logoList">
+  <div *ngFor="let image of logoList" class="logoList">
   <img [src]=[image.img] [alt]=[image.logo]>
   </div>
 </section>
@@ -54,23 +65,23 @@
   <h1> {{section5.title}}</h1>
   <p> {{section5.subtitle}} </p>
   <div>
-  <button>{{ btn.textA }}</button>
+  <button class="btnA">{{ btn.textA }}</button>
   </div>
   <div>
-  <button>{{ btn.textB }}</button>
+  <button class="btnB">{{ btn.textB }}</button>
   </div>
 </section>
 
-<footer fxLayout="column">
+<footer >
   <img src="assets/images/logo.svg" alt="">
+
   <div *ngFor = "let footer of footerList">
   <a href="#"> {{footer.title}}</a>
   </div>
 
-  <div *ngFor = "let icon of iconList">
+  <div *ngFor = "let icon of iconList" fxLayout="row wrap">
     <img [src]=[icon.img] [alt]=[icon.alt]>
-    
   </div>
 </footer>
 
-</body>
+</section>
